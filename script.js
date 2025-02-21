@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartItems = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
 
-    // Add to Cart Functionality
     document.querySelectorAll(".add-to-cart").forEach(button => {
         button.addEventListener("click", () => {
             const product = button.parentElement;
@@ -32,38 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
         updateCart();
     };
 
-    // Show Cart Modal
     document.getElementById("cart-btn").addEventListener("click", () => {
         document.getElementById("cart-modal").style.display = "block";
     });
 
-    // Close Modals
     document.querySelectorAll(".close").forEach(closeBtn => {
         closeBtn.addEventListener("click", () => {
             document.querySelectorAll(".modal").forEach(modal => modal.style.display = "none");
         });
     });
 
-    // Checkout
     document.getElementById("checkout-btn").addEventListener("click", () => {
         alert("Proceeding to checkout...");
         cart = [];
         updateCart();
-    });
-
-    // Login System
-    document.getElementById("login-btn").addEventListener("click", () => {
-        document.getElementById("login-modal").style.display = "block";
-    });
-
-    document.getElementById("login-submit").addEventListener("click", () => {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        
-        if (username === "admin" && password === "password") {
-            alert("Login Successful!");
-        } else {
-            alert("Invalid Credentials!");
-        }
     });
 });

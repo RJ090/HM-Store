@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <h1>HM Store</h1>
         <nav>
@@ -15,7 +16,7 @@
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#" id="login-btn">Login</a></li>
-                <li><a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><a href="#" id="cart-btn">🛒 (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
     </header>
@@ -50,16 +51,6 @@
             <ul id="cart-items"></ul>
             <p>Total: $<span id="cart-total">0</span></p>
             <button id="checkout-btn">Checkout</button>
-        </div>
-    </div>
-
-    <div id="login-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Login</h2>
-            <input type="text" id="username" placeholder="Enter username">
-            <input type="password" id="password" placeholder="Enter password">
-            <button id="login-submit">Login</button>
         </div>
     </div>
 
